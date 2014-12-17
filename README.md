@@ -1,6 +1,6 @@
 Symfony Sonata Base Project
 ===========================
-This is a simple project with a basic Symfony2 setup and several Sonata bundles. If you want a step by step guide, please visit the original post in [htt://miguelvilata.com link](htt://miguelvilata.com)
+This is a simple project with a basic Symfony2 setup and several Sonata bundles. If you want a step by step guide, please visit the original post in [http://www.miguelvilata.com/blog/2014/12/4/sacando-partido-al-proyecto-sonata-instalando-un-proyecto-base"](http://www.miguelvilata.com/blog/2014/12/4/sacando-partido-al-proyecto-sonata-instalando-un-proyecto-base "Symfony Sonata Base Project")
 
 ## Installation
 
