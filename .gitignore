@@ -1,0 +1,24 @@
+web/bundles/
+app/bootstrap.php.cache
+app/cache/*
+app/logs/*
+build/
+vendor
+bin
+composer.phar
+app/config/parameters.yml
+app/phpunit.xml
+.idea/
+nbproject/
+*.sublime-project
+*.sublime-workspace
+Icon*
+
+# Upload folder that contains client files
+web/uploads
+
+# Excluir las migraciones en desarrollo
+app/DoctrineMigrations/*
+
+# Excluir fichero intercambio phpunit
+app/.phpunit.xml.swp
