@@ -1,27 +1,20 @@
 Symfony Sonata Base Project
 ===========================
-Este es un proyecto nacido de un post donde se realiza una configuración de un sistema básico Symfony2 y los siguientes bundles de Sonata:
+This is a simple project with a basic Symfony2 setup and several Sonata bundles. If you want a step by step guide, please visit the original post in [htt://miguelvilata.com link](htt://miguelvilata.com)
 
-* SonataAdminBundle
-* SonataUserbundle
-* SonataClassificationBundle
-
-Si quieres seguir los pasos para configurar tu mismo el proyecto, consulta el post en [htt://miguelvilata.com link](htt://miguelvilata.com)
-
-## Instalación
-Los pasos para tener en marcha el proyecto son:
+## Installation
 
 #### Clonación del proyecto
 ```
 git clone https://github.com/wchemi/sonata-base.git
 ```
 
-#### Actualizar librerías
+#### Update libraries
 ```
 cd sonata-base && composer install
 ```
 
-#### Generar tablas
+#### Generate database and tables
 ```
 app/console doctrine:database:create
 ```  
@@ -29,26 +22,18 @@ app/console doctrine:database:create
 app/console doctrine:schema:update --dump-sql --force
 ```
 
-#### Crear base de datos y tablas
-```
-app/console doctrine:database:create
-```  
-```
-app/console doctrine:schema:update --dump-sql --force
-```
-
-#### Crear un usuario para poder acceder a la administración:
+#### Generate superadmin user for backend access:
 ```
 app/console fos:user:create admin --super-admin
 ```
 
-#### Configurar virtual host
+#### Virtual host configuration
 
 ```
 sudo vim /etc/apache2/sites-available/030-symfony-sonata.conf
 ```
 
-agrega la configuración adaptándola a tu sistema:
+update config bases on your system:
 
     <VirtualHost *:80>
       ServerName local.sonatablog.es
@@ -67,14 +52,12 @@ agrega la configuración adaptándola a tu sistema:
     </VirtualHost>
 
 
-Activa el nuevo site:
+Enable the site:
 
     sudo a2ensite 030-symfony-sonata.conf
 
 
-Finalmente modifica tu fichero host para que resuelva el dominio configurado. En mi sistema se encuentra en /etc/hosts
+Finally update you host file in order to resolv configured domain. In a debian system you must open /etc/hosts file.
 
     127.0.0.1       local.sonatablog.es
-
-
 
